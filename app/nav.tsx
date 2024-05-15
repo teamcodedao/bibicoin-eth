@@ -24,7 +24,7 @@ export default function Nav({isHamburger, className, ...rest}: NavProps) {
         <a href='/#tokenmics'>Tokenmics</a>
       </li>
       <li>
-        <a href='/#social'>Social</a>
+        <a href='/#contact'>Social</a>
       </li>
     </menu>
   );
