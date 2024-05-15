@@ -7,8 +7,10 @@ import Hamburger from './hamburger';
 import bibi0 from './bibi-0.png';
 import bibi1 from './bibi-1.png';
 import bibi2 from './bibi-2.png';
+import bibi3 from './bibi-3.png';
 import bibi4 from './bibi-4.gif';
 import bibi5 from './bibi-5.png';
+import bibi6 from './bibi-6.png';
 import buyImg from './buy.svg';
 import taxImg from './tax.svg';
 
@@ -92,7 +94,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='pt-10 sm:pt-16'>
+          <div
+            className={clsx(
+              'relative pb-16 pt-10 sm:pt-16',
+              'after:multi-[`absolute;inset-0;lg:bg-[size:95%];bg-[url(./bg-bibi-2.gif)];z-[-1];opacity-50`]'
+            )}
+          >
             <div className='mx-auto max-w-screen-desktop'>
               <div className='grid grid-cols-1 sm:grid-cols-2'>
                 <div className='flex justify-center px-5 sm:justify-end sm:px-10'>
@@ -109,7 +116,7 @@ export default function Home() {
 
             <div
               id='tokenmics'
-              className='mx-auto mt-20 max-w-screen-desktop px-5'
+              className={clsx('mx-auto mt-20 max-w-screen-desktop px-5')}
             >
               <h2 className='whitespace-nowrap pr-20 text-right font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
                 Tokenmics
@@ -122,6 +129,16 @@ export default function Home() {
                 <div className='break-all rounded-full border-[6px] border-white bg-secondary px-8 py-4 text-xl sm:px-12 sm:py-8 sm:text-3xl lg:border-[7px] lg:text-4xl xl:border-8 xl:px-16 xl:py-11 xl:text-[40px]'>
                   {process.env.NEXT_PUBLIC_COIN_ADDRESS}
                 </div>
+              </div>
+              <div className='mt-10 flex items-center justify-between gap-x-10 px-5 sm:px-10 md:mt-16 lg:px-20'>
+                <div className='hidden justify-end sm:flex'>
+                  <Image
+                    src={bibi3}
+                    alt=''
+                    className='max-w-[min(100%,363px)]'
+                  />
+                </div>
+                <Image src={bibi6} alt='' className='max-w-[min(100%,550px)]' />
               </div>
             </div>
           </div>
