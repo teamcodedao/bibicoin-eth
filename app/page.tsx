@@ -8,7 +8,9 @@ import bibi0 from './bibi-0.png';
 import bibi1 from './bibi-1.png';
 import bibi2 from './bibi-2.png';
 import bibi4 from './bibi-4.gif';
+import bibi5 from './bibi-5.png';
 import buyImg from './buy.svg';
+import taxImg from './tax.svg';
 
 export default function Home() {
   return (
@@ -105,8 +107,22 @@ export default function Home() {
               </div>
             </div>
 
-            <div id='tok' className='mx-auto max-w-screen-desktop'>
-              2
+            <div
+              id='tokenmics'
+              className='mx-auto mt-20 max-w-screen-desktop px-5'
+            >
+              <h2 className='whitespace-nowrap pr-20 text-right font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
+                Tokenmics
+              </h2>
+              <div className='relative z-10 mt-5 flex justify-center gap-x-10'>
+                <Image src={bibi5} alt='' className='hidden sm:block' />
+                <Image src={taxImg} alt='' />
+              </div>
+              <div className='relative z-0 -mt-5 flex justify-end px-5 lg:px-10 xl:px-14'>
+                <div className='break-all rounded-full border-[6px] border-white bg-secondary px-8 py-4 text-xl sm:px-12 sm:py-8 sm:text-3xl lg:border-[7px] lg:text-4xl xl:border-8 xl:px-16 xl:py-11 xl:text-[40px]'>
+                  {process.env.NEXT_PUBLIC_COIN_ADDRESS}
+                </div>
+              </div>
             </div>
           </div>
         </main>
