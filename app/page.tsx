@@ -11,6 +11,7 @@ import bibi3 from './bibi-3.png';
 import bibi4 from './bibi-4.gif';
 import bibi5 from './bibi-5.png';
 import bibi6 from './bibi-6.png';
+import bibi7 from './bibi-7.png';
 import buyImg from './buy.svg';
 import taxImg from './tax.svg';
 
@@ -35,9 +36,10 @@ export default function Home() {
 
       <div className='h-[5px] bg-black' />
 
-      <div id='home' className='mx-auto max-w-screen-desktop'>
+      <div className='mx-auto max-w-screen-desktop'>
         <main>
           <div
+            id='home'
             className={clsx(
               'relative flex justify-between pb-24 pt-20 lg:pt-32',
               'after:multi-[`z-[-1];opacity-50;absolute;inset-0;bg-[url(./bg-bibi-1.gif)];bg-cover;bg-no-repeat`]'
@@ -116,16 +118,18 @@ export default function Home() {
 
             <div
               id='tokenmics'
-              className={clsx('mx-auto mt-20 max-w-screen-desktop px-5')}
+              className='mx-auto mt-20 max-w-screen-desktop px-5'
             >
               <h2 className='whitespace-nowrap pr-20 text-right font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
                 Tokenmics
               </h2>
               <div className='relative z-10 mt-5 flex justify-center gap-x-10'>
                 <Image src={bibi5} alt='' className='hidden sm:block' />
-                <Image src={taxImg} alt='' />
+                <div className='max-w-full shrink-0'>
+                  <Image src={taxImg} alt='' className='max-w-full' />
+                </div>
               </div>
-              <div className='relative z-0 -mt-5 flex justify-end px-5 lg:px-10 xl:px-14'>
+              <div className='relative z-0 flex justify-end px-5 md:-mt-5 lg:px-10 xl:px-14'>
                 <div className='break-all rounded-full border-[6px] border-white bg-secondary px-8 py-4 text-xl sm:px-12 sm:py-8 sm:text-3xl lg:border-[7px] lg:text-4xl xl:border-8 xl:px-16 xl:py-11 xl:text-[40px]'>
                   {process.env.NEXT_PUBLIC_COIN_ADDRESS}
                 </div>
@@ -143,6 +147,37 @@ export default function Home() {
             </div>
           </div>
         </main>
+      </div>
+
+      <div id='contact' className='relative overflow-hidden py-20 lg:py-40'>
+        <Image src={bibi7} fill alt='' className='object-cover' />
+        <div className='relative z-10 mx-auto max-w-screen-desktop px-5 sm:px-10 desktop:px-20'>
+          <footer className='max-w-[min(100%,552px)] text-center'>
+            <h2 className='whitespace-nowrap font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
+              Contact bibi
+            </h2>
+            <div
+              className={clsx(
+                'mt-16 flex justify-center gap-x-14 lg:mt-24',
+                '*:multi-[inline-block;rounded-full;size-28;bg-white;flex;justify-center;items-center]',
+                '[&>*]:sm:multi-[`size-32`]',
+                '[&>*]:lg:multi-[`size-40`]',
+                '[&_img]:multi-[`size-[70%]`]'
+              )}
+            >
+              <a href={process.env.NEXT_PUBLIC_TELEGRAM_URL} target='_telegram'>
+                <img src='/telegram.svg' alt='' />
+              </a>
+              <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target='_twitter'>
+                <img src='/twitter.svg' alt='' />
+              </a>
+            </div>
+            <div className='mt-16 text-4xl sm:text-5xl lg:mt-20 lg:text-6xl xl:text-[64px]'>
+              Let&apos;s make history together. Let&apos;s make memecoins great
+              again. LFG!
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
   );
