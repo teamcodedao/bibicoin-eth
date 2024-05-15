@@ -4,7 +4,9 @@ import clsx from 'clsx';
 import Nav from './nav';
 import Hamburger from './hamburger';
 
+import bibi0 from './bibi-0.png';
 import bibi1 from './bibi-1.png';
+import bibi2 from './bibi-2.png';
 import buyImg from './buy.svg';
 
 export default function Home() {
@@ -32,7 +34,7 @@ export default function Home() {
         <main>
           <div
             className={clsx(
-              'relative flex justify-between pt-20 lg:pt-32',
+              'relative flex justify-between pb-24 pt-20 lg:pt-32',
               'after:multi-[`z-[-1];opacity-50;absolute;inset-0;bg-[url(./bg-bibi-1.gif)];bg-cover;bg-no-repeat`]'
             )}
           >
@@ -57,6 +59,33 @@ export default function Home() {
             </div>
             <div className='hidden flex-1 items-end sm:flex'>
               <Image src={bibi1} quality={100} priority alt='' />
+            </div>
+          </div>
+
+          <div id='about' className='mt-10 flex justify-between md:mt-0'>
+            <div className='flex-1 max-[780px]:hidden'>
+              <Image src={bibi2} alt='' />
+            </div>
+            <div className='relative flex-1 overflow-hidden'>
+              <div className='absolute top-0 size-full md:top-28'>
+                <Image
+                  src={bibi0}
+                  fill
+                  alt=''
+                  className='object-cover object-top'
+                />
+              </div>
+              <div className='relative z-10 px-10 pt-20 xl:px-20'>
+                <h3 className='whitespace-nowrap font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
+                  About Bibi
+                </h3>
+                <div className='mt-10 text-balance pb-10 text-xl lg:text-2xl xl:mt-20'>
+                  Leap into the world of BIBI, the memecoin that was founded on
+                  a mission to become the most memeable memecoin in existence.
+                  Pepe aims to be the ultimate embodiment of internet and crypto
+                  culture. With its humor and viral.
+                </div>
+              </div>
             </div>
           </div>
         </main>
