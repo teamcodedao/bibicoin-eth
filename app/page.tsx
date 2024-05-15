@@ -7,6 +7,7 @@ import Hamburger from './hamburger';
 import bibi0 from './bibi-0.png';
 import bibi1 from './bibi-1.png';
 import bibi2 from './bibi-2.png';
+import bibi4 from './bibi-4.gif';
 import buyImg from './buy.svg';
 
 export default function Home() {
@@ -86,6 +87,26 @@ export default function Home() {
                   culture. With its humor and viral.
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className='pt-10 sm:pt-16'>
+            <div className='mx-auto max-w-screen-desktop'>
+              <div className='grid grid-cols-1 sm:grid-cols-2'>
+                <div className='flex justify-center px-5 sm:justify-end sm:px-10'>
+                  <Image
+                    src={bibi4}
+                    unoptimized
+                    alt=''
+                    className='max-w-[min(100%,502px)]'
+                  />
+                </div>
+                <div className='invisible max-sm:hidden'></div>
+              </div>
+            </div>
+
+            <div id='tok' className='mx-auto max-w-screen-desktop'>
+              2
             </div>
           </div>
         </main>
