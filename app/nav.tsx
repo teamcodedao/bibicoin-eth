@@ -10,7 +10,7 @@ export default function Nav({isHamburger, className, ...rest}: NavProps) {
       {...rest}
       className={clsx(className, 'drop-shadow-default', {
         'text-3xl [&_a]:multi-[`block;py-1.5`]': isHamburger,
-        'flex items-end gap-x-8 lg:gap-x-12 pt-7 text-3xl lg:text-4xl':
+        'flex items-end gap-x-8 lg:gap-x-8 xl:gap-x-12 pt-7 text-3xl xl:text-4xl':
           !isHamburger,
       })}
     >

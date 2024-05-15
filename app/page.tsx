@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import clsx from 'clsx';
 
+import Logo from './logo';
 import Nav from './nav';
 import Hamburger from './hamburger';
 
@@ -23,10 +24,10 @@ export default function Home() {
           <header className='flex items-center justify-between gap-x-12 overflow-hidden py-10 lg:gap-x-16 lg:pb-14 lg:pt-20'>
             <a
               href='/'
-              className='shrink-0 font-pacifico text-6xl text-stroke text-stroke-3 lg:text-[64px]'
+              className='block shrink-0 font-pacifico text-6xl text-stroke text-stroke-3 lg:text-[64px]'
             >
-              bibi{' '}
-              <span className='hidden min-[850px]:inline-block'>the bear</span>
+              <span className='min-[950px]:hidden'>bibi</span>
+              <Logo className='hidden min-[950px]:block' />
             </a>
             <Nav className='max-[730px]:hidden' />
             <div className='hidden max-[730px]:block'>
