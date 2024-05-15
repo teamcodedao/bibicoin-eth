@@ -17,39 +17,41 @@ import taxImg from './tax.svg';
 
 export default function Home() {
   return (
-    <div className='min-h-screen'>
-      <div className='mx-auto max-w-screen-desktop px-5 sm:px-10 desktop:px-20'>
-        <header className='flex items-center justify-between gap-x-12 overflow-hidden py-10 lg:gap-x-16 lg:pb-14 lg:pt-20'>
-          <a
-            href='/'
-            className='shrink-0 font-pacifico text-6xl text-stroke text-stroke-3 lg:text-[64px]'
-          >
-            bibi{' '}
-            <span className='hidden min-[850px]:inline-block'>the bear</span>
-          </a>
-          <Nav className='max-[730px]:hidden' />
-          <div className='hidden max-[730px]:block'>
-            <Hamburger />
-          </div>
-        </header>
+    <div className='relative min-h-screen after:multi-[`absolute;inset-0;lg:bg-[size:90%];bg-[url(./bg-bibi-2.gif)];z-[-1];opacity-50`]'>
+      <div className='bg-primary'>
+        <div className='mx-auto max-w-screen-desktop px-5 sm:px-10 desktop:px-20'>
+          <header className='flex items-center justify-between gap-x-12 overflow-hidden py-10 lg:gap-x-16 lg:pb-14 lg:pt-20'>
+            <a
+              href='/'
+              className='shrink-0 font-pacifico text-6xl text-stroke text-stroke-3 lg:text-[64px]'
+            >
+              bibi{' '}
+              <span className='hidden min-[850px]:inline-block'>the bear</span>
+            </a>
+            <Nav className='max-[730px]:hidden' />
+            <div className='hidden max-[730px]:block'>
+              <Hamburger />
+            </div>
+          </header>
+        </div>
       </div>
 
       <div className='h-[5px] bg-black' />
 
-      <div className='mx-auto max-w-screen-desktop'>
+      <div className='relative mx-auto max-w-screen-desktop'>
         <main>
           <div
             id='home'
-            className={clsx(
-              'relative flex justify-between pb-24 pt-20 lg:pt-32',
-              'after:multi-[`z-[-1];opacity-50;absolute;inset-0;bg-[url(./bg-bibi-1.gif)];bg-cover;bg-no-repeat`]'
-            )}
+            className='relative flex justify-between pb-24 pt-20 lg:pt-32'
           >
-            <div className='flex flex-1 flex-col px-5 sm:px-10 desktop:px-20'>
+            <div className='absolute left-[10%] top-1/2 z-0 w-3/5 -translate-y-1/2 bg-primary'>
+              <Image src={bibi5} alt='' className='w-full opacity-50' />
+            </div>
+            <div className='relative z-10 flex flex-1 flex-col px-5 sm:px-10 desktop:px-20'>
               <h1 className='font-pacifico text-7xl text-stroke text-stroke-5'>
                 $bibi
               </h1>
-              <div className='mt-10 text-balance text-lg md:text-xl lg:mt-16 lg:text-2xl'>
+              <div className='mt-10 text-balance text-lg !leading-6 md:text-xl lg:mt-16 lg:text-2xl'>
                 Bibi the Baby Bear is a meme character associated with BOBO. The
                 design of Bibi is baBaby BOBO, and sometimes Pepe the Frog. The
                 name “Bibi“ was chosen BOBOwife got pregnant, and has become the
@@ -64,7 +66,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className='hidden flex-1 items-end sm:flex'>
+            <div className='relative z-10 hidden flex-1 items-end sm:flex'>
               <Image src={bibi1} quality={100} priority alt='' />
             </div>
           </div>
@@ -74,7 +76,7 @@ export default function Home() {
               <Image src={bibi2} alt='' />
             </div>
             <div className='relative flex-1 overflow-hidden'>
-              <div className='absolute top-0 size-full md:top-28'>
+              <div className='absolute top-0 size-full bg-primary md:top-28'>
                 <Image
                   src={bibi0}
                   fill
@@ -86,7 +88,7 @@ export default function Home() {
                 <h3 className='whitespace-nowrap font-pacifico text-7xl text-stroke text-stroke-5 lg:text-[5rem] xl:text-8xl'>
                   About Bibi
                 </h3>
-                <div className='mt-10 text-balance pb-10 text-xl lg:text-2xl xl:mt-20'>
+                <div className='mt-10 text-balance pb-10 text-xl !leading-6 lg:text-2xl xl:mt-20'>
                   Leap into the world of BIBI, the memecoin that was founded on
                   a mission to become the most memeable memecoin in existence.
                   Pepe aims to be the ultimate embodiment of internet and crypto
@@ -96,12 +98,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className={clsx(
-              'relative pb-16 pt-10 sm:pt-16',
-              'after:multi-[`absolute;inset-0;lg:bg-[size:95%];bg-[url(./bg-bibi-2.gif)];z-[-1];opacity-50`]'
-            )}
-          >
+          <div className='relative pb-16 pt-10 sm:pt-16'>
             <div className='mx-auto max-w-screen-desktop'>
               <div className='grid grid-cols-1 sm:grid-cols-2'>
                 <div className='flex justify-center px-5 sm:justify-end sm:px-10'>
@@ -124,7 +121,11 @@ export default function Home() {
                 Tokenmics
               </h2>
               <div className='relative z-10 mt-5 flex justify-center gap-x-10'>
-                <Image src={bibi5} alt='' className='hidden sm:block' />
+                <Image
+                  src={bibi5}
+                  alt=''
+                  className='hidden min-[1000px]:block'
+                />
                 <div className='max-w-full shrink-0'>
                   <Image src={taxImg} alt='' className='max-w-full' />
                 </div>
