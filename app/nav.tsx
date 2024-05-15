@@ -1,15 +1,17 @@
 import clsx from 'clsx';
 
-interface NavProps {
+interface NavProps extends React.ComponentProps<'menu'> {
   isHamburger?: boolean;
 }
 
-export default function Nav({isHamburger}: NavProps) {
+export default function Nav({isHamburger, className, ...rest}: NavProps) {
   return (
     <menu
-      className={clsx('text-4xl drop-shadow-default', {
-        '': isHamburger,
-        'flex gap-x-12': !isHamburger,
+      {...rest}
+      className={clsx(className, 'drop-shadow-default', {
+        'text-3xl [&_a]:multi-[`block;py-1.5`]': isHamburger,
+        'flex items-end gap-x-8 lg:gap-x-12 pt-7 text-3xl lg:text-4xl':
+          !isHamburger,
       })}
     >
       <li>
