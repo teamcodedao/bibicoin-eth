@@ -16,7 +16,8 @@ const pacificoFont = Pacifico({
 });
 
 export const metadata: Metadata = {
-  title: 'Bibi The Bear',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATABASE_URL),
+  title: '$BIBI Is Flipping Daddy $BOBO',
   description:
     'Bibi the Baby Bear is a meme character associated with BOBO. The design of Bibi is baBaby BOBO, and sometimes Pepe the Frog. The name “Bibi“ was chosen BOBOwife got pregnant, and has become the official name for the character. Bibi is posted worldwide on Twitter, 4chan, but particularly on the /biz board (4chan). Bibi is an OG Bibi Meme artist, who has been creating Bibi content since its inception in 2018.',
 };
